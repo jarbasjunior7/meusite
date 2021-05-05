@@ -4,7 +4,7 @@
   <body>
     <style>
       body{
-        background: url('img/fundoinicio.jpg') center center no-repeat fixed; 
+        background: url('img/fundobranco1.png') center center no-repeat fixed; 
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
@@ -18,11 +18,11 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-compatible" content="IE=edge">
 <link rel="stylesheet" href="style.css">
-<link rel="shortcut icon" href="img/jarbasjr.png">
+<link rel="shortcut icon" href="img/Jarbasjr.jpg">
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <link type="text/css" rel="stylesheet" href="css/materialize.css" media="screen,projection" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title> WebSite JarbasJr </title>
+<title> Questão 4 </title>
 
 <!--JavaScript at end of body for optimized loading-->
 <script type="text/javascript" src="js/materialize.js"></script>
@@ -46,16 +46,77 @@
   </div>
 </nav>
 
-<body> 
-  <center>
-    <img class="displayed" src="img/Jarbasjr1.png" alt="image description" width="800" height="600">
-  </center>
-  </body>
-  
+<center>
+<h1>CALCULE O SEU IMC</h1>
+</center>
 
+<div class="row">
+    <div class="col-12">
+      <h5 style="text-align: center;">Em Qual Tabela você se encaixa?</h5>
+      <table class="table table-sm center">
+        <thead>
+          <tr>
+            <th class="col s3" scope="col">IMC</th>
+            <th class="col s3" scope="col">Nível de obesidade</th>
+            <th class="col s6" scope="col">Problemas de saúde</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="white">
+            <td class="col s3">menor que 18,5</td>
+            <td class="col s3">Baixo peso</td>
+            <td class="col s6">Peso baixo para altura. Maior probabilidade de anorexia.</td>
+          </tr>
+          <tr class="white">
+            <td class="col s3">18,5 à 24,9</td>
+            <td class="col s3">Peso normal</td>
+            <td class="col s6">Maior probabilidade de ser um indivíduo saudável</td>
+          </tr>
+          <tr class="white">
+            <td class="col s3">25 à 29,9</td>
+            <td class="col s3">Pré-obesidade</td>
+            <td class="col s6">Alguma probabilidade de problemas de saúde. Predisposição a tornar-se obeso</td>
+          </tr>
+          
+          <tr style="white" >
+           
+            <td class="col s3">30 à 34,9</td>
+            <td class="col s3">Obesidade grau I</td>
+            <td class="col s6">Risco moderado de diabetes tipo II, hipertensão, colesterol, cardiopatia.</td>
+          </tr>
+          <tr class="white">
+            <td class="col s3">35 à 39,9</td>
+            <td class="col s3">Obesidade grau II</td>
+            <td class="col s6">Risco grave. Aumenta o risco das doenças associadas. O risco de mortalidade aumenta 50%</td>
+          </tr>
+          <tr class="white">
+            <td class="col s3">maior que 40</td>
+            <td class="col s3">Obesidade grau III ou obesidade môrbida</td>
+            <td class="col s6">Risco muito grave. O risco de doenças associadas assim como a mortalidade aumenta 90%</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+</div>
+<div class="row espacamento_esquerda_direita">
+<div class="input-field col s4">
+    <input id="id_nome" type="text">
+    <label for="id_nome">Nome do paciente</label>
+</div>
+<div class="input-field col s4">
+    <input  id="id_altura" type="number">
+    <label for="id_altura">Altura</label>
+</div>
+<div class="input-field col s4">
+    <input id="id_peso" type="number" >
+    <label for="id_peso">Peso</label>
+</div>
+</div>
+<button onclick="calcular_imc()" id="calcular_imc" class="espacamento_esquerda_direita">Calcular IMC</button>
 
+<section id="mostrar_resultado">
 
-
+</section>
 
 </head>
   <br> 
@@ -67,29 +128,25 @@
   <br>  
   <br> 
   <br> 
+  <br> 
+  <br> 
+  <br> 
+  <br> 
+  <br> 
+  <br>  
+  <br> 
 
 
-
-<footer class="page-footer deep-dark blue">
+<footer class="page-footer dark blue">
   <div class="container">
     <div class="row">
       <div class="col l6 s12">
-        <h5 class="white-text">
-          <font size="4" face="Georgia, Arial" color=#FFFFFF>
-            Acesse o GitHub Para Acessar Codigo
-          </font>
-          </h5>
-
+        <h5 class="white-text">Acesse o GitHub Para Acessar Codigo</h5>
         <p class="grey-text text-lighten-4"><a class="grey-text text-lighten-3"
             href="https://github.com/jarbasjunior7/meusite.git" target="_blank"><img border="0"
               src="img/github.png" /></a>
 
-          <h5 class="white-text">
-            <font size="4" face="Georgia, Arial" color=#FFFFFF>
-              Entre em Contato Pelo E-mail 
-            </font>
-            
-          </h5>
+          <h5 class="white-text">Entre em Contato Pelo E-mail </h5>
           <p class="grey-text text-lighten-4"><a class="grey-text text-lighten-3"
               href="https://mail.google.com/mail/u/0/#sent" target="_blank"><img border="0" src="img/gmail.png" /></a>
 
@@ -97,7 +154,7 @@
 
       <div class="col l4 offset-l2 s12">
         <h5 class="white-text">
-          <font size="4" face="Georgia, Arial" color=#FFFFFF>
+          <font size="5" face="Georgia, Arial" color=#FFFFFF>
             Redes Sociais
           </font>
         </h5>
@@ -117,7 +174,7 @@
   <div class="footer-copyright">
     <div class="container">
       © 2021 Copyright Text© 2021 Copyright Text © 2021 Copyright Text © 2021 Copyright Text © 2021 Copyright Text ©
-      2021 Copyright Text 
+      2021 Copyright Text © 2021 Copyright Text
     </div>
   </div>
 </footer>
