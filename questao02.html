@@ -73,24 +73,24 @@
 
     var parcelapg = (totalx / parcela)
     if (codigo == 3030) {
-      var produto = "Caixas De Som JBL"
+      var produto = "Geladeira"
     } else if (codigo == 6039) {
-      var produto = "Mouse"
+      var produto = "Fogão"
     } else if (codigo == 2523) {
-      var produto = "PC Gamer"
+      var produto = "Microondas"
     } else if (codigo == 1228) {
-      var produto = "Roteador"
+      var produto = "Frigideira"
     } else if (codigo == 7563) {
-      var produto = "Notebook"
+      var produto = "Liquidificador"
     } else if (codigo == 1325) {
-      var produto = "Monitor"
+      var produto = "Bebedouro"
     } else {
       alert(" Produto Inexistente, Verifique e Tente Novamente!!!");
     }
 
     for (i = 1; i <= parcela; i++) {
       document.getElementById("gerar").innerHTML = document.getElementById("gerar").innerHTML +
-        "<br>__________________<b>LOJA JR INFORMÁTICA</b>___________________" +
+        "<br>__________________<b>JR ELETRODOMESTICOS</b>___________________" +
         "<br><b>CLIENTE: </b>" + nome.toUpperCase() + "<br><b>PRODUTO: </b>" + produto + "<br><b>VALOR TOTAL: </b>" +
         total.toLocaleString('pt-BR', {
           style: 'currency',
@@ -131,7 +131,7 @@
 
 <font style="text-align: center"size="4" face="Georgia, Arial" color=#FFFFFF>
   <p>____________________________________________________________________</p>
-  <h4>JR INFORMÁTICA</h4>
+  <h4>JR ELETRODOMÉSTICOS</h4>
   <p>Loja Fisica e On-line</p> 
   <p>____________________________________________________________________</p>
 </font>
@@ -150,11 +150,8 @@
   <div class="input-field col s1"></div>
   <div class="input-field col s4">
     <font size="6" face="Georgia, Arial" color=#FFFFFF>
-      <h4>TABELA DOS PRODUTOS</h4>
+      <h4>PRODUTOS</h4>
     </font>
-
-    <br>
-    <br>
 
     <table class="table table-sm">
       <thead>
@@ -165,22 +162,22 @@
       </thead>
       <tbody>
         <tr>
-          <td>3030</td><td>Caixa De Som JBL</td>
+          <td>3030</td><td>Geladeira</td>
         </tr>
         <tr>
-          <td>6039</td><td>Mouse</td>
+          <td>6039</td><td>Fogão</td>
         </tr>
         <tr>
-          <td>2523</td><td>PC Gamer</td>
+          <td>2523</td><td>Microondas</td>
         </tr>
         <tr>
-          <td>1228</td><td>Roteador</td>
+          <td>1228</td><td>Frigideira</td>
         </tr>
         <tr>
-          <td>7563</td><td>Notebook</td>
+          <td>7563</td><td>Liquidificador</td>
         </tr>
         <tr>
-          <td>1325</td><td>Monitor</td>
+          <td>1325</td><td>Bebedouro</td>
         </tr>
       </tbody>
     </table>
@@ -188,11 +185,8 @@
   <div class="input-field col s2"></div>
   <div class="input-field col s4">
     <font size="6" face="Georgia, Arial" color=#FFFFFF>
-      <h4>TABELA DE AUMENTO DA PORCENTAGEM</h4>
+      <h4> AUMENTO DA PORCENTAGEM</h4>
     </font>
-    
-    <br>
-    <br>
 
     <table class="table table-sm">
       <thead>
@@ -269,7 +263,7 @@
   <br> 
 
     <button style="vertical-align:middle;margin:0px 120px" onclick="gerarcarne()"
-      class="btn btn-outline-primary float-right" type="button">Gerar</button>
+      class="btn btn-outline-primary float-right" type="button">Emitir</button>
   </form>
 </div>
 <br> 

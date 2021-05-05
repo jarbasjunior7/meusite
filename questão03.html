@@ -45,24 +45,210 @@
     </ul>
   </div>
 </nav>
+<script type="text/javascript">
+function contra_che() {
+  var nome = form_gc_cheque.nome.value;
+  var cargo = form_gc_cheque.cargo.value;
+  var salario = form_gc_cheque.salario.value;
+
+  var n_sal = "Cargo sem reajuste sálarial";
+
+      if ((cargo == "Atendente") || (cargo == "atendente") || (cargo == "ATENDENTE")) {
+    var aumento = (parseFloat(salario) * 0.08);
+    var n_sal = (parseFloat(salario) + parseFloat(aumento));
+    var aum_per = " (+ 8 %)";
+      } else if ((cargo == "Estoquista") || (cargo == "estoquista") || (cargo == "ESTOQUISTA")) {
+    var aumento = (parseFloat(salario) * 0.06);
+    var n_sal = (parseFloat(salario) + parseFloat(aumento));
+    var aum_per = " (+ 6 %)";
+      } else if ((cargo == "Gerente") || (cargo == "gerente") || (cargo == "GERENTE")) {
+    var aumento = (parseFloat(salario) * 0.03);
+    var n_sal = (parseFloat(salario) + parseFloat(aumento));
+    var aum_per = " (+ 3 %)";
+      } else {
+    var aumento = "Cargo sem aumento!";
+  }
+
+  if (n_sal <= 1045) {
+    var inss = (parseFloat(n_sal) * 0.075);
+    var sal_liq = parseFloat(n_sal) - parseFloat(inss);
+    var perc_inss = " (- 7,5 %)";
+  } else if ((n_sal > 1045) && (n_sal <= 2089.6)) {
+    var inss = (parseFloat(n_sal) * 0.09);
+    var sal_liq = parseFloat(n_sal) - parseFloat(inss);
+    var perc_inss = " (- 9 %)";
+  } else if ((n_sal > 2089.6) && (n_sal <= 3134.4)) {
+    var inss = (parseFloat(n_sal) * 0.12);
+    var sal_liq = parseFloat(n_sal) - parseFloat(inss);
+    var perc_inss = " (- 12 %)";
+  } else {
+    alert("Salário não permitido ou Cargo inexistente,tente novamente!!!")
+  }
+  document.getElementById("demo").innerHTML =
+    "<br>_______________________________________________" +
+    "<br><b>FUNCIONÁRIO:</b> " + nome.toUpperCase() +
+    "<br><b>CARGO:</b> " + cargo.toUpperCase() +
+    "<br><br><b>SALÁRIO ATUAL:</b> " + parseFloat(salario).toLocaleString('pt-BR', {
+      style: 'currency',
+      currency: 'BRL'
+    }) +
+    "<br><b>AUMENTO SALARIAL:</b> " + aumento.toLocaleString('pt-BR', {
+      style: 'currency',
+      currency: 'BRL'
+    }) + aum_per +
+    "<br><b>NOVO SALÁRIO:</b> " + n_sal.toLocaleString('pt-BR', {
+      style: 'currency',
+      currency: 'BRL'
+    }) +
+    "<br><b>DESCONTO INSS:</b> " + inss.toLocaleString('pt-BR', {
+      style: 'currency',
+      currency: 'BRL'
+    }) + perc_inss +
+    "<br><br><b>SALÁRIO LÍQUIDO:</b> " + sal_liq.toLocaleString('pt-BR', {
+      style: 'currency',
+      currency: 'BRL'
+    }) +
+    "<br>_______________________________________________";
+}
+</script>
+</head>
+
+<body>
+  <center>
+<!--JavaScript at end of body for optimized loading-->
+<script type="text/javascript" src="js/materialize.min.js"></script>
+
+<br>  
+<br> 
+<font style="text-align: center"size="5" face="Georgia, Arial" color=#FFFFFF>
+  <p>____________________________________________________________________</p>
+  <h3> Emitindo Contra-Cheque</h3>
+  <p>____________________________________________________________________</p>
+</font>
+
+<br> 
+<br> 
+<br> 
+<br>  
+<br> 
+
+<div class="row">
+<div class="input-field col s1"></div>
+<div class="input-field col s4">
+  <font style="text-align: center"size="5" face="Georgia, Arial" color=#FFFFFF>
+    <h5>Plano de Cargo e Carreira da Empresa</h5>
+  </font>
+  <table class="table table-sm">
+    <thead>
+      <tr>
+        <th scope="col">Cargo</th><th scope="col">Aumento %</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Atendente</td>
+        <td>8</td>
+      </tr>
+      <tr>
+        <td>Estoquista</td>
+        <td>6</td>
+      </tr>
+      <tr>
+        <td>Gerente</td>
+        <td>3</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="input-field col s1"></div>
+<div class="input-field col s4">
+  <font style="text-align: center"size="5" face="Georgia, Arial" color=#FFFFFF>
+    <h5>Contribuição Para o inss em 2020</h5>
+  </font>
+  
+  <table class="table table-sm">
+    <thead>
+      <tr>
+        <th scope="col">Sálario base</th>
+        <th scope="col">Aliquota INSS %</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>até R$ 1.045,00</td>
+        <td>7,5</td>
+      </tr>
+      <tr>
+        <td>de R$ 1.045,01 até R$ 2.089,60</td>
+        <td>9</td>
+      </tr>
+      <tr>
+        <td>de R$ 2.089,61 até R$ 3.134,40</td>
+        <td>12</td>
+      </tr>
+      <tr>
+        <td>acima de R$ 3.134,40</td>
+        <td>14</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</div>
+<hr>
+<br>
+<font style="text-align: center"size="5" face="Georgia, Arial" color=#FFFFFF>
+  <p>____________________________________________________________________</p>
+  <h3> Emita Seu Contra-Cheque </h3>
+  <p>____________________________________________________________________</p>
+</font>
+<br>
+<div class="row">
+<form name="form_gc_cheque" id="form_gc_cheque">
+  <div class="row">
+    <div class="input-field col s1"></div>
+    <div class="input-field col s10">
+      <input placeholder="Nome do Funcionário" id="nome" name="nome" type="text" class="validate" required>
+      <label>Funcionário:</label>
+    </div>
+    <div class="row">
+      <div class="input-field col s2"></div>
+      <div class="input-field col s3">
+        <input placeholder="Insira o cargo do funcionário" id="cargo" name="cargo" type="text" required>
+        <label>Cargo:</label>
+      </div>
+      <div class="input-field col s1"></div>
+      <div class="input-field col s4">
+        <input placeholder="1.100,00" id="salario" name="salario" type="number" min="0" required>
+        <label>Salário(R$):</label>
+      </div>
+    </div>
+
+    <br> 
+    <br> 
+    <br> 
+    <br> 
+
+    <button style="vertical-align:middle;margin:0px 120px" onclick="contra_che()"
+      class="btn btn-outline-primary float-right" type="button">Emitir</button>
+</form>
+</div>
+
+<br> 
+<br> 
+<br> 
+<br> 
+
+<p id="demo" style="vertical-align:middle;margin:0px 120px"></p>
+<br><br>
+</center>
 </head>
   <br> 
   <br> 
   <br> 
   <br> 
   <br> 
-  <br> 
-  <br>  
-  <br> 
-  <br> 
-  <br> 
-  <br> 
-  <br> 
-  <br> 
-  <br> 
-  <br>  
-  <br> 
-
+  <br>
 
 <footer class="page-footer dark blue">
   <div class="container">
