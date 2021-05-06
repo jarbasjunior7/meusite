@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <body>
+  
     <style>
       body{
         background: url('img/fundobranco1.png') center center no-repeat fixed; 
@@ -11,7 +11,7 @@
         background-size: cover;
       } 
     </style> 
-       </body>
+       
 
 <head>
 
@@ -28,30 +28,132 @@
 <script type="text/javascript" src="js/materialize.js"></script>
 
 <!-- Dropdown Structure -->
-<ul id="dropdown1" class="dropdown-content">
-  <li><a href="#!">one</a></li>
-  <li><a href="#!">two</a></li>
-  <li class="divider"></li>
-  <li><a href="#!">three</a></li>
-</ul>
-<nav>
-  <div class="nav-wrapper dark blue">
-    <a href="#!" class="brand-logo"><img src="img/jarbasjr.png" width="90" height="64"></a>
-    <ul class="right hide-on-med-and-down">
-      <li><a href="sobremim.html"target="_blank">Sobre Mim</a></li>
-      <li><a href="entreemcontato.html"target="_blank">Entre em Contato Conosco</a></li>
-      <!-- Dropdown Trigger -->
-      <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Atividade<i class="material-icons right">arrow_drop_down</i></a></li>
-    </ul>
-  </div>
-</nav>
+<style>
+  * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+  }
 
-<body> 
+  nav .nav-wrapper>a {
+      margin-left: 20px;
+  }
+
+  nav .nav-wrapper>ul {
+      margin-right: 20px;
+  }
+
+  .collection {
+      margin-top: 0;
+      display: none;
+  }
+</style>
+
+
+  <ul id="dropdown1" class="dropdown-content">
+      <li><a href="questao01.html">Questão 1</a></li>
+      <li><a href="questao02.html">Questão 2</a></li>
+      <li><a href="questao03.html">Questão 3</a></li>
+      <li><a href="questao04.html">Questão 4</a></li>
+  </ul>
+  <nav>
+      <div class="nav-wrapper dark blue">
+        <a href="#!" class="brand-logo"><img src="img/jarbasjr.png" width="90" height="64"></a>
+          <ul class="right hide-on-med-and-down">
+            <li><a href="index.html"target="_blank">inicio</a></li> 
+              <li><a class="dropdown-trigger" id="questoesDD" href="#!" data-target="questoesDD">Atividade<i
+                          class="material-icons right">arrow_drop_down</i></a></li>
+          </ul>
+      </div>
+
+      <div id="listQ" class="collection">
+          <a href="questao01.html" class="collection-item">Questão 1</a>
+          <a href="questao02.html" class="collection-item">Questão 2</a>
+          <a href="questao03.html" class="collection-item">Questão 3</a>
+          <a href="questao04.html" class="collection-item">Questão 4</a>
+      </div>
+  </nav>
+
+  <script>
+      var btnDD = document.querySelector('#questoesDD');
+      var visivel = false;
+      btnDD.addEventListener('click', () => {
+          var listQ = document.querySelector('#listQ');
+          if (visivel) {
+              listQ.style.display = 'none';
+              visivel = false;
+          } else {
+              listQ.style.display = 'block';
+              visivel = true;
+          }
+      })
+  </script>
+
+
 <center>
   <img class="displayed" src="img/eu1.png" alt="image description" width="400" height="500">
 </center>
-</body>
 
+
+<font style="text-align: center"size="5" face="Georgia, Arial" color=#FFFFFF>
+  <h2> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Jarbas Jr</h2>
+  <h3> Tecnólogo Em Análise e Desenvolvimento de Sistemas </h3>
+  <p>UNILEÃO-Centro Universitário Doutor Leão Sampaio</p>
+
+</font>
+
+<br>
+<br>
+
+<font style="text-align: center"size="5" face="Georgia, Arial" color=#FFFFFF>
+  <p>____________________________________________________________________</p>
+  <h3> Nome</h3>
+  <p>Jarbas Do Nascimento Barros Júnior</p>
+  <p>____________________________________________________________________</p>
+</font>
+
+<font style="text-align: center"size="5" face="Georgia, Arial" color=#FFFFFF>
+  
+  <h3> Formação Acadêmica</h3>
+  <br>
+  <h4>Ensino Médio Completo</h4>
+  <p>Erem Gov. Muniz Falcão</p>
+  <h4>Ensino Superior Incompleto 3/6</h4>
+  <p>UNILEÃO-Centro Universitário Doutor Leão Sampaio</p>
+  <p>____________________________________________________________________</p>
+
+</font>
+
+<font style="text-align: center"size="5" face="Georgia, Arial" color=#FFFFFF>
+  
+  <h3> Cursos</h3>
+  <p>Informática Básica</p>
+  <p>Redes de Computadores</p>
+  <p>Sistemas Operacionais</p>
+  <p>Gerente De lojas</p>
+  <p>Eletricista Residêncial</p>
+  <p>Aux. Técnico Segurança do Trabalho</p>
+  <p>Frentista</p>
+  <p>____________________________________________________________________</p>
+</font>
+
+<font style="text-align: center"size="5" face="Georgia, Arial" color=#FFFFFF>
+ 
+ 
+  <h3> Experiências </h3>
+ 
+  <p>(windows,word,excel, corel draw, etc..)</p>
+   <p>manutenção de computadores e impressoras, 
+      cabeamento de rede,</p> 
+     <p>compras e vendas de equipamentos de informatica.</p>
+     
+     <p>Tenho senso de organização e extrema atenção, 
+       a detalhes que me faz acreditar que sou profissional,</p>
+       <p>E algumas das minhas características é ter 
+        responsabilidade e dedicação ao trabalho.</p> 
+  <p>____________________________________________________________________</p>
+
+</font>
 
 </head>
   <br> 
@@ -59,57 +161,62 @@
   <br> 
   <br> 
   <br> 
-  <br> 
-  <br>  
-  <br> 
-  <br> 
-  <br> 
-  <br> 
-  <br> 
-  <br> 
-  <br> 
-  <br>  
-  <br> 
 
-
-<footer class="page-footer dark blue">
-  <div class="container">
-    <div class="row">
-      <div class="col l6 s12">
-        <h5 class="white-text">Acesse o GitHub Para Acessar Codigo</h5>
-        <p class="grey-text text-lighten-4"><a class="grey-text text-lighten-3"
-            href="https://github.com/jarbasjunior7/meusite.git" target="_blank"><img border="0"
-              src="img/github.png" /></a>
-
-          <h5 class="white-text">Entre em Contato Pelo E-mail </h5>
-          <p class="grey-text text-lighten-4"><a class="grey-text text-lighten-3"
-              href="https://mail.google.com/mail/u/0/#sent" target="_blank"><img border="0" src="img/gmail.png" /></a>
-
-      </div>
-
-      <div class="col l4 offset-l2 s12">
-        <h5 class="white-text">
-          <font size="5" face="Georgia, Arial" color=#FFFFFF>
-            Redes Sociais
-          </font>
-        </h5>
-        <ul>
-          <li><a class="grey-text text-lighten-3" href="https://api.whatsapp.com/send?phone=5587981737116&"
-              target="_blank"><img border="0" src="img/Whatsapp.png" /></a>
-          <li><a class="grey-text text-lighten-3" href="https://www.instagram.com/jarbasjr7/" target="_blank"><img
-                border="0" src="img/instagram.png" /></a>
-          <li><a class="grey-text text-lighten-3" href="https://www.facebook.com/jarbasn3249/" target="_blank"><img
-                border="0" src="img/Facebook.png" /></a>
-          <li><a class="grey-text text-lighten-3" href="https://twitter.com/Jarbasnbjunior" target="_blank"><img
-                border="0" src="img/twitter.png" /></a>
-        </ul>
-      </div>
-    </div>
-  </div>
-  <div class="footer-copyright">
+  <footer class="page-footer dark blue">
     <div class="container">
-      © 2021 Copyright Text© 2021 Copyright Text © 2021 Copyright Text © 2021 Copyright Text © 2021 Copyright Text ©
-      2021 Copyright Text © 2021 Copyright Text
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">
+            <font size="5" face="Georgia, Arial" color=#FFFFFF>
+              Acesse o GitHub Para Obter o Código
+            </font>
+          </h5>
+          <p class="grey-text text-lighten-4"><a class="grey-text text-lighten-3"
+              href="https://github.com/jarbasjunior7/meusite.git" target="_blank"><img border="0"
+                src="img/github.png" /></a>
+                
+                <h5 class="white-text">
+                <font size="5" face="Georgia, Arial" color=#FFFFFF>
+                  Entre em Contato pelo E-mail
+                </font>
+            <p class="grey-text text-lighten-4"><a class="grey-text text-lighten-3"
+                href="https://mail.google.com/mail/u/0/#sent" target="_blank"><img border="0" src="img/gmail.png" /></a>
+  
+        </div>
+  
+        <div class="col l4 offset-l2 s12">
+          <h5 class="white-text">
+            <font size="5" face="Georgia, Arial" color=#FFFFFF>
+              Redes Sociais
+            </font>
+          </h5>
+          
+            <a class="grey-text text-lighten-3" href="https://api.whatsapp.com/send?phone=5587981737116&"
+                target="_blank"><img border="0" src="img/Whatsapp.png" /></a>
+            <a class="grey-text text-lighten-3" href="https://www.instagram.com/jarbasjr7/" target="_blank"><img
+                  border="0" src="img/instagram.png" /></a>
+            <a class="grey-text text-lighten-3" href="https://www.facebook.com/jarbasn3249/" target="_blank"><img
+                  border="0" src="img/Facebook.png" /></a>
+            <a class="grey-text text-lighten-3" href="https://twitter.com/Jarbasnbjunior" target="_blank"><img
+                  border="0" src="img/twitter.png" /></a>
+          
+  
+  
+   
+    <h5 class="white-text">
+      <font size="5" face="Georgia, Arial" color=#FFFFFF>
+       Creditos ao Materialize
+      </font>
+  <p class="grey-text text-lighten-4"><a class="grey-text text-lighten-3"
+      href="https://materializecss.com/" target="_blank"><img border="0" src="img/materialaze.png" /></a>
+    
     </div>
   </div>
-</footer>
+  </div>
+    
+      <div class="footer-copyright">
+      <div class="container">
+        Esse site Foi Desenvolvido por Um Aluno Para Realização de Atividades, Sem Fins Lucrativos!  Acesse o Site da Nossa Instituição   https://unileao.edu.br/
+      </div>
+    </div>
+  </footer>
