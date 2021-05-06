@@ -36,7 +36,7 @@
 </ul>
 <nav>
   <div class="nav-wrapper dark blue">
-    <a href="#!" class="brand-logo"><img src="img/Jarbasjr.jpg" width="90" height="64"></a>
+    <a href="#!" class="brand-logo"><img src="img/jarbasjr.png" width="90" height="64"></a>
     <ul class="right hide-on-med-and-down">
       <li><a href="sobremim.html"target="_blank">Sobre Mim</a></li>
       <li><a href="entreemcontato.html"target="_blank">Entre em Contato Conosco</a></li>
@@ -45,6 +45,81 @@
     </ul>
   </div>
 </nav>
+
+
+<script type="text/javascript">
+  function mediacalculada() {
+    var nome = form_calcularmedia.nome.value;
+    var disciplina = form_calcularmedia.disciplina.value;
+    var n1 = form_calcularmedia.n1.value;
+    var n2 = form_calcularmedia.n2.value;
+    var media = (parseFloat(n1) + parseFloat(n2)) / 2;
+
+    if (media <= 3) {
+      document.getElementById("demo").innerHTML = nome.toUpperCase() + ", você foi REPROVADO na disciplina " +
+        disciplina.toUpperCase() + ", com Média " + media;
+    } else if ((media > 3) && (media < 7)) {
+      document.getElementById("demo").innerHTML = nome.toUpperCase() + ", você está de RECUPERAÇÃO na disciplina " +
+        disciplina.toUpperCase() + ", com Média " + media;
+    } else if ((media >= 7) && (media <= 10)) {
+      document.getElementById("demo").innerHTML = nome.toUpperCase() + ", você foi APROVADO na disciplina " +
+        disciplina.toUpperCase() + ", com Média " + media;
+    } else {
+      document.getElementById("demo").innerHTML = "Algo está errado, corrija e tente novamente!!!";
+    }
+  }
+</script>
+</head>
+
+<body>
+<!--JavaScript at end of body for optimized loading-->
+<script type="text/javascript" src="js/materialize.min.js"></script>
+
+<nav>
+  <div class="nav-wrapper">
+    <a href="index.html" class="brand-logo"><b>ATIVIDADE - Projeto WEB</b></a>
+    <ul id="nav-mobile" class="right hide-on-med-and-down">
+      <li><a href="questoes.html">Questões</a></li>
+      <li><a href="arquivo.html">Arquivo</a></li>
+    </ul>
+  </div>
+</nav>
+
+<h3 class="center-align">Questão da Atividade</h3>
+
+<br>
+
+<h5 style="vertical-align:middle;margin:0px 20px">Resolução:</h5>
+
+<br>
+
+<div class="row">
+  <form name="form_calcularmedia" id="form_calcularmedia">
+    <div class="row">
+      <div class="input-field col s4">
+        <input placeholder="Insira o nome" id="nome" name="nome" type="text" class="validate" required>
+        <label>Nome do Aluno:</label>
+      </div>
+      <div class="input-field col s6">
+        <input placeholder="Insira a Disciplina" id="disciplina" name="disciplina" type="text" class="validate"
+          required>
+        <label>Disciplina:</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s5">
+        <input placeholder="Insira Nota da AV1" id="n1" name="n1" type="number" max="10" min="0" required>
+        <label>Nota AV1:</label>
+      </div>
+      <div class="input-field col s5">
+        <input placeholder="Insira Nota da AV2" id="n2" name="n2" type="number" max="10" min="0" required>
+        <label>Nota AV2:</label>
+      </div>
+    </div>
+    <button style="vertical-align:middle;margin:0px 10px" onclick="mediacalculada()"
+      class="btn btn-outline-primary float-right" type="button">Calcular Média</button>
+  </form>
+</div>
 </head>
   <br> 
   <br> 
@@ -55,14 +130,6 @@
   <br>  
   <br> 
   <br> 
-  <br> 
-  <br> 
-  <br> 
-  <br> 
-  <br> 
-  <br>  
-  <br> 
-
 
 <footer class="page-footer dark blue">
   <div class="container">
